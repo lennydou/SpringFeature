@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <!-- services -->
+
+    <bean id="schoolService" class="com.lennydou.service.SchoolService">
+        <!-- property#name refer to the name of the JavaBean property -->
+        <!-- property#ref refer to the name of another bean definition -->
+        <property name="userDao" ref="userDao" />
+        <property name="scoreDao" ref="scoreDao" />
+    </bean>
+
+</beans>
